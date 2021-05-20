@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sportStore.fx.Controller">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="tblProducts" layoutX="116.0" layoutY="40.0" prefHeight="206.0" prefWidth="602.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+              <columns>
+                <TableColumn fx:id="columTradeMark" prefWidth="124.20000606775284" text="TRADEMARK" />
+                <TableColumn fx:id="columNameProduct" prefWidth="253.79998779296875" text="NAME PRODUCT" />
+                  <TableColumn fx:id="columProducTipe" prefWidth="184.60000610351562" text="PRODUCT TYPE" />
+                  <TableColumn fx:id="columPrice" prefWidth="235.60003662109375" text="PRICE" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="40.0" prefWidth="600.0" text="Store" textAlignment="CENTER" textOverrun="CLIP" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font></Label>
+            <Label layoutX="29.0" layoutY="12.0" prefHeight="27.0" prefWidth="91.0" text="Welcome:" textFill="#1e0101">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="labelName" alignment="CENTER" layoutX="121.0" layoutY="15.0" prefHeight="18.0" prefWidth="161.0" text="Name" textFill="#0b0bbf">
+               <font>
+                  <Font name="Droid Sans" size="18.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutX="531.0" layoutY="10.0" prefHeight="18.0" prefWidth="51.0" text="Email:" textFill="#161616">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+            <Label fx:id="labelEmail" alignment="CENTER" layoutX="608.0" layoutY="10.0" prefHeight="27.0" prefWidth="169.0" text="Email" textFill="#0b0bbf">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
+         </children></AnchorPane>
+    <AnchorPane fx:id="btnDeleteProduct" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="lViewShoppingCart" layoutX="-1.0" layoutY="66.0" prefHeight="182.0" prefWidth="379.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="66.0">
+              <columns>
+                <TableColumn fx:id="columShoppingTradeMark" prefWidth="94.0" text="TRADEMARK" />
+                <TableColumn fx:id="columShoppingNameProduct" prefWidth="115.20001983642578" text="NAME PRODUCT" />
+                  <TableColumn fx:id="columShoppingProductType" prefWidth="107.40000915527344" text="PRODUCT TYPE" />
+                  <TableColumn fx:id="columShoppingPrice" prefWidth="59.199951171875" text="PRICE" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button layoutX="1.0" layoutY="-1.0" mnemonicParsing="false" onAction="#buttonAddToCart" prefHeight="28.0" prefWidth="142.0" text="Add to cart" textFill="#0dcf1a" AnchorPane.leftAnchor="1.0">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="29.0" prefHeight="37.0" prefWidth="379.0" text="Shopping cart" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="29.0">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="391.0" layoutY="66.0" text="quantity of products:" textFill="#e50b0b">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="391.0" layoutY="101.0" text="total price:" textFill="#e50b0b">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbQuantityProducts" alignment="CENTER" layoutX="612.0" layoutY="68.0" prefHeight="22.0" prefWidth="101.0" text="0">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbTotalPrice" alignment="CENTER" layoutX="608.0" layoutY="100.0" prefHeight="22.0" prefWidth="109.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="650.0" mnemonicParsing="false" onAction="#btnDeleteProductShopping" prefHeight="28.0" prefWidth="142.0" text="Delete Product" textFill="#f80b0b" AnchorPane.rightAnchor="5.999999999999972">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font></Button>
+            <Button layoutX="391.0" layoutY="143.0" mnemonicParsing="false" onAction="#btnConfirmOrder" prefHeight="26.0" prefWidth="142.0" text="Confirm Order" textFill="#210aed">
+               <font>
+                  <Font name="Cambria" size="14.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

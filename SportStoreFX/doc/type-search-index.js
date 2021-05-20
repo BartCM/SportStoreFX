@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"sportStore.data","l":"Client"},{"p":"sportStore.fx","l":"Controller"},{"p":"sportStore.data","l":"FileUtils"},{"p":"sportStore.fx","l":"Main"},{"p":"sportStore.data","l":"Product"},{"p":"sportStore.data","l":"User"}];updateSearchResults();
